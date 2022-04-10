@@ -1,22 +1,29 @@
-<style>
-  :host {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-      Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-      'Segoe UI Symbol';
-    font-size: 14px;
-    color: #333;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+<!-- <style>
+  /* @font-face {
+    font-family: 'Bulgers';
+    src: url('assets/fonts/_Bulgers-Outline.otf') format('opentype');
   }
+
+  *,
+  h1 {
+    font-family: 'Bulgers', Fallback, sans-serif !important;
+  } */
+
   /* Responsive Styles */
   @media screen and (max-width: 767px) {
   }
 
   @media screen and (max-width: 575px) {
   }
-</style>
+</style> -->
 
-<div>Hello</div>
+<div>
+  <app-hero></app-hero>
+  <app-header></app-header>
+  <app-section [title]="'Animation / Illustration'"></app-section>
+  <app-section [title]="'Videography / Editing'"></app-section>
+  <app-footer></app-footer>
+  <app-music-button></app-music-button>
+</div>
 
 <router-outlet></router-outlet>
