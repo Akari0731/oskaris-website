@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "site": "oskari-online",
     "public": "public",
     "ignore": [
       "firebase.json",
