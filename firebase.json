@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "public",
+    "public": "dist/oskaris-website",
     "ignore": [
       "firebase.json",
       "**/.*",
