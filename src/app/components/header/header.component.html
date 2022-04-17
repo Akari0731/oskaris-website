@@ -1,15 +1,18 @@
 <div class="container">
   <div class="wrapper">
-    <img class="icon" src="assets/logos/Logo.svg" />
+    <img class="icon" src="assets/logos/Logo.svg" (click)="onNavigateHome()" />
     <div class="buttons">
-      <div class="button active">
-        <div class="pencil">
-          <img src="assets/logos/Pencil.svg" />
-          <img class="pencilLine" src="assets/logos/PencilLine.svg" />
-        </div>
+      <div class="button" [ngClass]="{ active: activeRoute === '/' }">
+        <app-active-page [active]="activeRoute === '/'"></app-active-page>
         Work
       </div>
-      <div class="button">Info</div>
+      <div
+        class="button"
+        (click)="onNavigateInfo()"
+        [ngClass]="{ active: activeRoute === '/info' }">
+        <app-active-page [active]="activeRoute === '/info'"></app-active-page>
+        Info
+      </div>
       <div class="button japanese">日本語<span class="space"></span></div>
     </div>
   </div>

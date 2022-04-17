@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.sass'],
 })
 export class HeaderComponent {
-  constructor() {}
+  constructor(private router: Router) {}
+  activeRoute = this.router.url;
+
+  onNavigateHome() {
+    this.router.navigate(['']);
+  }
+
+  onNavigateInfo() {
+    this.router.navigate(['info']);
+  }
 }
