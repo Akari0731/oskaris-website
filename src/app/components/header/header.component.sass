@@ -1,15 +1,17 @@
+@use 'global'
+    
 .container
     position: -webkit-sticky
     position: sticky
     top: 0
-    border-bottom: 1rem solid rgba(0, 0, 0, 0)
+    border-bottom: 1rem solid global.$black
     border-image-source: url('../../../assets/logos/Circle.svg')
     border-image-slice: 32 4
     border-image-repeat: round
     
 .wrapper
     height: 5rem
-    background-color: white
+    background-color: global.$white
     display: flex
     justify-content: space-between
     align-items: center
@@ -28,7 +30,7 @@ img
     font-size: 1.325rem
 
 .active
-    color: #00616B
+    color: global.$green
     position: relative
 
 .pencil
@@ -44,7 +46,7 @@ img
 
 .japanese
     font-size: 1.125rem
-    font-family: 'Kosugi Maru', sans-serif
+    font-family: global.$font-kosugi-maru
     flex-direction: column
 
 .space

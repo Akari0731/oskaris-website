@@ -6,7 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./video.component.sass'],
 })
 export class VideoComponent {
-  constructor() {
-    console.log('VideoComponent');
-  }
+  constructor() {}
 }
