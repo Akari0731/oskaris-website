@@ -1,9 +1,16 @@
-<div class="container">
+<div
+  class="container"
+  *ngIf="activeRoute !== '/' || sticky"
+  [ngClass]="{ sticky: sticky }">
   <div class="wrapper">
     <img class="icon" src="assets/logos/Logo.svg" (click)="onNavigateHome()" />
     <div class="buttons">
-      <div class="button" [ngClass]="{ active: activeRoute === '/' }">
-        <app-active-page [active]="activeRoute === '/'"></app-active-page>
+      <div
+        class="button"
+        (click)="onNavigateWork()"
+        [ngClass]="{ active: sticky || activeRoute === '/work' }">
+        <app-active-page
+          [active]="sticky || activeRoute === '/work'"></app-active-page>
         Work
       </div>
       <div
@@ -13,7 +20,14 @@
         <app-active-page [active]="activeRoute === '/info'"></app-active-page>
         Info
       </div>
-      <div class="button japanese">日本語<span class="space"></span></div>
+      <div
+        class="button japanese"
+        (click)="onNavigateJapanese()"
+        [ngClass]="{ active: activeRoute === '/japanese' }">
+        <app-active-page
+          [active]="activeRoute === '/japanese'"></app-active-page>
+        日本語<span class="space"></span>
+      </div>
     </div>
   </div>
 </div>

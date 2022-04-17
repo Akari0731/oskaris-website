@@ -1,35 +1,9 @@
 @use 'global'
 
 .wrapper
-    padding: 0 6rem 4rem 4rem
+    padding: global.$header-padding 6rem 4rem 4rem
     width: calc(100% - 10rem)
     display: flex
     flex-direction: column
     align-items: center
     font-family: global.$font-confotaa
-
-.container
-    display: grid
-    grid-template-columns: 4fr 3fr
-    gap: 2rem
-
-.description
-    text-align: center
-    font-size: 1.25rem
-    padding: 2rem 3rem
-
-.logo
-    width: 100%
-
-.profile
-    width: 100%
-
-.getInTouch
-    width: 30vw
-
-.contactDetails
-    padding-top: 0.75rem
-    font-size: 1.5rem
-    font-weight: bold
-    & > span
-        color: global.$yellow

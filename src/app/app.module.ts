@@ -9,7 +9,11 @@ import { HeroComponent } from './components/hero/hero.component';
 import { MusicButtonComponent } from './components/music-button/music-button.component';
 import { SectionComponent } from './components/section/section.component';
 import { HomeComponent } from './pages/home/home.component';
+import { InfoContactComponent } from './pages/info/info-contact/info-contact.component';
+import { InfoMainComponent } from './pages/info/info-main/info-main.component';
 import { InfoComponent } from './pages/info/info.component';
+import { JapaneseComponent } from './pages/japanese/japanese.component';
+import { VideoDescriptionComponent } from './pages/video/description/video-description.component';
 import { VideoComponent } from './pages/video/video.component';
 
 @NgModule({
@@ -24,6 +28,10 @@ import { VideoComponent } from './pages/video/video.component';
     VideoComponent,
     InfoComponent,
     ActivePageComponent,
+    JapaneseComponent,
+    VideoDescriptionComponent,
+    InfoContactComponent,
+    InfoMainComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

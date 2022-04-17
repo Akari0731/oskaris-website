@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, Input } from '@angular/core';
+import { Event, NavigationEnd, NavigationError, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,14 +7,35 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.sass'],
 })
 export class HeaderComponent {
-  constructor(private router: Router) {}
-  activeRoute = this.router.url;
+  @Input() sticky: boolean | undefined;
+  activeRoute: string = this.router.url;
+
+  constructor(private router: Router) {
+    this.router.events.subscribe((event: Event) => {
+      if (event instanceof NavigationEnd) {
+        this.activeRoute = this.router.url;
+      }
+
+      if (event instanceof NavigationError) {
+        this.activeRoute = 'error';
+      }
+    });
+  }
 
   onNavigateHome() {
     this.router.navigate(['']);
   }
 
+  //TODO: where to navigate?
+  onNavigateWork() {
+    this.router.navigate(['work']);
+  }
+
   onNavigateInfo() {
     this.router.navigate(['info']);
+  }
+
+  onNavigateJapanese() {
+    this.router.navigate(['japanese']);
   }
 }

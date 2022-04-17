@@ -22,6 +22,6 @@ export class SectionComponent {
   ];
 
   onNavigateToVideo() {
-    this.router.navigate(['/video']);
+    this.router.navigate(['/work']);
   }
 }
