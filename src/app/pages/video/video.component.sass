@@ -1,10 +1,11 @@
 @use 'global'
+$ratio-base: 3.5
 
 .wrapper
     padding: global.$header-padding 3rem 2rem 0
     display: grid
     column-gap: 2rem
-    grid-template-columns: 4rem 48vw 1fr
+    grid-template-columns: 4rem calc($ratio-base * 16vw) 1fr
     align-items: center
 
 .button
@@ -13,5 +14,5 @@
         cursor: pointer
 
 .video
-    height: 27vw
+    height: calc($ratio-base * 9vw)
     background-color: lightgrey
