@@ -1,8 +1,20 @@
+@use 'global'
+    
 .hero 
-    height: 20rem
+    width: 100vw
+    min-height: 20rem
     background-image: url("../../../assets/logos/HeroBackground.svg")
-    background-size: cover
+    background-size: 100vw auto
     position: relative
+    background-repeat: no-repeat
+    @media (max-width: global.$mediaMaxWidth)
+        min-height: 20rem
+    @media (max-width: global.$mediaDesktopWidth)
+        min-height: 16rem
+    @media (max-width: global.$mediaBp1Width)
+        min-height: 12rem
+    @media (max-width: global.$mediaMinWidth)
+        min-height: 6rem
 
 .originalPosition
     position: absolute
