@@ -5,12 +5,11 @@
     z-index: 10
     top: 0
     width: 100%
-    border-image-repeat: round
     background-repeat: no-repeat
     @include global.for-phone-only
-        height: 6rem
-        background-image: linear-gradient(to bottom, global.$white 0, global.$white 3rem, rgba(0, 65, 76, 0.24) 2rem, transparent 100%)
-        background-size: 100% 6rem
+        height: 8rem
+        background-image: linear-gradient(to bottom, global.$white 0, global.$white 4rem, rgba(0, 65, 76, 0.24) 3rem, transparent 100%)
+        background-size: 100% 8rem
     @include global.for-tablet-portrait-up
         height: 8rem
         background-image: linear-gradient(to bottom, global.$white 0, global.$white 4rem, rgba(0, 65, 76, 0.24) 3rem, transparent 100%)
@@ -34,24 +33,22 @@
     
 .wrapper
     @include global.for-phone-only
-        height: 2rem
-        padding: 0.75rem 1rem 0
-    @include global.for-tablet-portrait-up
-        height: 3rem
-    @include global.for-tablet-landscape-up
         height: 4rem
+        padding: 0 1rem 1rem
+    @include global.for-tablet-portrait-up
+        height: 5rem
+    @include global.for-tablet-landscape-up
+        height: 6rem
     @include global.for-desktop-up
-        height: 5rem
+        height: 8rem
     @include global.for-big-desktop-up 
-        height: 5rem
+        height: 8rem
     display: flex
     justify-content: space-between
     align-items: center
-    padding: 0.5rem 2rem 0
-    border-bottom: 1rem solid global.$white
-    border-image-source: url('../../../assets/logos/Circle.svg')
-    border-image-slice: 32 8
-    border-image-repeat: round
+    padding: 0 2rem 1rem
+    background-image: url('../../../assets/logos/Header.svg')
+    background-size: cover
 
 .icon 
     @include global.for-phone-only
