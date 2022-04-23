@@ -9,8 +9,17 @@
 .contents
     padding: 2rem 0
     display: grid
-    grid-template-columns: 1fr 1fr 1fr
-    grid-template-rows: auto
+    @include global.for-phone-only
+        grid-template-columns: 1fr
+    @include global.for-tablet-portrait-up
+        grid-template-columns: 1fr 1fr
+    @include global.for-tablet-landscape-up
+        grid-template-columns: 1fr 1fr 1fr
+    @include global.for-desktop-up
+        grid-template-columns: 1fr 1fr 1fr
+    @include global.for-big-desktop-up 
+        grid-template-columns: 1fr 1fr 1fr
+    grid-template-rows: auto 
 
 .content
     width: 100%

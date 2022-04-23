@@ -4,11 +4,15 @@
     text-align: center
 
 .getInTouch
-    width: 30vw
+    width: 40vw
+    @include global.for-tablet-landscape-up
+        width: 30vw
 
 .contactDetails
     padding-top: 0.75rem
-    font-size: global.$font-normal
+    font-size: global.$font-small
+    @include global.for-tablet-landscape-up
+        font-size: global.$font-normal
     font-weight: bold
     & > span
         color: global.$yellow

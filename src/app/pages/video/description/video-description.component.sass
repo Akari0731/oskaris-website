@@ -4,17 +4,23 @@
     text-align: center
 
 .website
-    font-size: global.$font-large
+    font-size: global.$font-medium
+    @include global.for-tablet-landscape-up
+        font-size: global.$font-large
     font-style: italic
 
 .title
-    font-size: global.$font-large
+    font-size: global.$font-medium
+    @include global.for-tablet-landscape-up
+        font-size: global.$font-large
     font-style: italic
     color: global.$yellow
     padding-bottom: 1rem
     
 .details
     font-family: global.$font-confotaa
-    font-size: global.$font-small
+    font-size: 1rem
+    @include global.for-tablet-landscape-up
+        font-size: global.$font-small
     & > span
         font-weight: bold

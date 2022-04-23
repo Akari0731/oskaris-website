@@ -4,7 +4,7 @@
     display: flex
     background-color: global.$white
     height: 6rem
-    padding: 2rem 2rem 2rem 0
+    padding: 2rem
     align-items: center
     justify-content: center
 
@@ -15,20 +15,28 @@
     align-items: center
     row-gap: 1rem
     font-size: global.$font-normal
+    font-size: 1rem
+    @include global.for-tablet-landscape-up
+        font-size: global.$font-normal
 
 .infoTitle
     font-style: italic
-    font-size: global.$font-medium
-
+    font-size: global.$font-normal
+    @include global.for-tablet-landscape-up
+        font-size: global.$font-medium
 .contact
     color: #FCB23A
 
 .details
-    width: 80%
+    width: 90%
     display: grid
     grid-template-columns: 4fr 1fr 4fr 1fr 4fr
+    @include global.for-phone-only
+        grid-template-columns: 4fr 1fr
     justify-items: center
-    font-size: global.$font-small
+    font-size: 1rem
+    @include global.for-tablet-landscape-up
+        font-size: global.$font-small
     font-family: global.$font-confotaa
 
 img
