@@ -17,6 +17,7 @@ import { InfoComponent } from './pages/info/info.component';
 import { JapaneseComponent } from './pages/japanese/japanese.component';
 import { VideoDescriptionComponent } from './pages/video/description/video-description.component';
 import { VideoComponent } from './pages/video/video.component';
+import { SafePipe } from './shared/safe.pipe';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { VideoComponent } from './pages/video/video.component';
     VideoDescriptionComponent,
     InfoContactComponent,
     InfoMainComponent,
+    SafePipe,
   ],
   imports: [
     BrowserModule,

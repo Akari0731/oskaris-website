@@ -4,24 +4,17 @@
       class="button"
       src="assets/logos/ReturnButton.svg"
       (click)="onNavigateHome()" />
-    <div style="padding: 75% 0 0 0; position: relative">
-      <!-- vimeo -->
+    <div style="padding: 70% 0 0 0; position: relative">
       <iframe
         id="iframe"
-        src="https://player.vimeo.com/video/702311317?h=63e1d37b08&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+        [src]="video?.src | safe"
         frameborder="0"
         allow="autoplay; fullscreen; picture-in-picture"
         allowfullscreen
         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"
-        title="Teknos_Powdercoating_M7_notext_130mb.mp4"></iframe>
-      <!-- google drive -->
-      <!-- <iframe
-        src="https://drive.google.com/file/d/1Ep4aVL7SmAibR2aO_xzWjX4eCmY5NGu9/preview"
-        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"
-        allowfullscreen
-        allow="autoplay"></iframe> -->
+        title="{{ video?.title }}"></iframe>
     </div>
-    <app-video-description></app-video-description>
+    <app-video-description [video]="video"></app-video-description>
   </div>
   <app-footer></app-footer>
 </ng-container>

@@ -1,26 +1,22 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params, Router } from '@angular/router';
+import { images } from 'src/app/constants';
+import { VideoProps } from 'src/app/types';
 
 @Component({
   selector: 'app-video',
   templateUrl: './video.component.html',
   styleUrls: ['./video.component.sass'],
 })
-export class VideoComponent implements OnInit, AfterViewInit {
-  constructor(private router: Router) {}
+export class VideoComponent implements OnInit {
+  constructor(private router: Router, private route: ActivatedRoute) {}
+  video: VideoProps | undefined = undefined;
 
   ngOnInit() {
-    document.domain = 'player.vimeo.com';
     window.scrollTo(0, 0);
-  }
-
-  ngAfterViewInit() {
-    const iframe = document.getElementById('iframe') as any;
-    const iframDoc = iframe.contentDocument;
-    if (iframDoc?.body?.style) {
-      iframDoc.body.style.color = 'blue !important';
-    }
-    console.log('iframe', iframe, iframDoc, iframDoc?.body?.style);
+    this.route.params.subscribe((params: Params) => {
+      this.video = images.find(image => image.id === params['id']);
+    });
   }
 
   onNavigateHome() {

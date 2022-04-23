@@ -1,11 +1,11 @@
-<ng-container>
-  <div class="website">etuovi.com</div>
-  <div class="title">swaippaajat</div>
-  <div class="details">
-    Animated commercial made for social media platforms as well as outdoor
-    advertising.
-  </div>
+<ng-container *ngIf="video">
+  <div class="website">{{ video.client }}</div>
+  <div class="title">{{ video.title }}</div>
+  <div class="details">{{ video.description }}</div>
   <br />
-  <div class="details"><span>Execution:</span> me</div>
-  <div class="details"><span>Idea:</span> me and Ilmari Lehtonen</div>
+  <div class="details"><span>Execution:</span> {{ video.credit }}</div>
+  <div class="details"><span>Idea:</span> {{ video.author }}</div>
+</ng-container>
+<ng-container *ngIf="!video">
+  <div class="website">Check other work from home, please!</div>
 </ng-container>

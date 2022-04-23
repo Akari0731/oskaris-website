@@ -8,9 +8,9 @@
       <div
         class="button"
         (click)="onNavigateWork()"
-        [ngClass]="{ active: sticky || activeRoute === '/work' }">
+        [ngClass]="{ active: sticky || activeRoute.includes('/work') }">
         <app-active-page
-          [active]="sticky || activeRoute === '/work'"></app-active-page>
+          [active]="sticky || activeRoute.includes('/work')"></app-active-page>
         Work
       </div>
       <div

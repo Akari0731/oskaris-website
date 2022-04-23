@@ -7,7 +7,7 @@ import { VideoComponent } from './pages/video/video.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'work', component: VideoComponent },
+  { path: 'work/:id', component: VideoComponent },
   { path: 'info', component: InfoComponent },
   { path: 'japanese', component: JapaneseComponent },
 ];

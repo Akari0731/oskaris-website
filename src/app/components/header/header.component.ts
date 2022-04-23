@@ -28,7 +28,7 @@ export class HeaderComponent {
 
   //TODO: where to navigate?
   onNavigateWork() {
-    this.router.navigate(['work']);
+    this.router.navigate(['']);
   }
 
   onNavigateInfo() {
