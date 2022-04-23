@@ -10,14 +10,46 @@
     padding: 2rem 0
     display: grid
     grid-template-columns: 1fr 1fr 1fr
+    grid-template-rows: auto
 
 .content
     width: 100%
-    height: -webkit-fill-available
-    justify-self: center
-    align-self: center
-
-img
-    height: 8rem
+    position: relative
     &:hover
         cursor: pointer
+    &:hover > .frame
+        visibility: visible
+        opacity: 1
+
+$padding: 0.75rem
+.frame
+    visibility: hidden
+    opacity: 0
+    transition: opacity 0.4s ease-in
+    position: absolute
+    top: 0
+    left: 0
+    width: calc(100% - $padding * 2)
+    height: calc(100% - $padding * 2)
+    padding: $padding
+
+$borderWidth: 0.125rem
+.frameBorder
+    height: calc(100% - $borderWidth * 2)
+    border: $borderWidth solid white
+    display: flex
+    align-items: flex-end
+
+.frameTitle
+    padding: 1rem 0 0.75rem
+    width: 100%
+    background-color: rgba(0, 0, 0, 0.50)
+    color: global.$white
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: global.$font-medium
+
+img
+    width: 100%
+    height: 100%

@@ -1,10 +1,16 @@
 <div class="container">
   <ng-content></ng-content>
   <div class="contents">
-    <img
-      *ngFor="let image of images"
+    <div
       class="content"
-      (click)="onNavigateToVideo(image)"
-      src="{{ image.thumbnailSrc }}" />
+      *ngFor="let image of images"
+      (click)="onNavigateToVideo(image)">
+      <img src="{{ image.thumbnailSrc }}" />
+      <div class="frame">
+        <div class="frameBorder">
+          <div class="frameTitle">{{ image.title }}</div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
