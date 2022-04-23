@@ -10,7 +10,7 @@ export const images: VideoProps[] = [
       'Animated commercial made for social media platforms as well as outdoor advertising.',
     credit: 'me',
     author: 'me and Ilmari Lehtonen',
-    thumbnailSrc: 'assets/thumbnails/alykas.avif',
+    thumbnailSrc: 'assets/thumbnails/alykas.jpeg',
   },
   {
     id: '702367960',
@@ -21,7 +21,7 @@ export const images: VideoProps[] = [
       'Animated commercial made for social media platforms as well as outdoor advertising.',
     credit: 'me',
     author: 'me and Ilmari Lehtonen',
-    thumbnailSrc: 'assets/thumbnails/etuovi.avif',
+    thumbnailSrc: 'assets/thumbnails/etuovi.jpeg',
   },
   {
     id: '702313711',
@@ -32,7 +32,7 @@ export const images: VideoProps[] = [
       'Animated commercial made for social media platforms as well as outdoor advertising.',
     credit: 'me',
     author: 'me and Ilmari Lehtonen',
-    thumbnailSrc: 'assets/thumbnails/uber.avif',
+    thumbnailSrc: 'assets/thumbnails/uber.jpeg',
   },
   {
     id: '702311317',
@@ -43,6 +43,6 @@ export const images: VideoProps[] = [
       'Animated commercial made for social media platforms as well as outdoor advertising.',
     credit: 'me',
     author: 'me and Ilmari Lehtonen',
-    thumbnailSrc: 'assets/thumbnails/technos.avif',
+    thumbnailSrc: 'assets/thumbnails/teknos.jpeg',
   },
 ];
