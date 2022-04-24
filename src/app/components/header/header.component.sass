@@ -1,14 +1,14 @@
 @use 'global'
 
 .container   
-    position: absolute
+    position: fixed
     z-index: 10
     top: 0
     width: 100%
     background-repeat: no-repeat
     @include global.for-phone-only
         height: 8rem
-        background-image: linear-gradient(to bottom, global.$white 0, global.$white 4rem, rgba(0, 65, 76, 0.24) 3rem, transparent 100%)
+        background-image: linear-gradient(to bottom, global.$white 0, global.$white 3rem, rgba(0, 65, 76, 0.24) 2rem, transparent 100%)
         background-size: 100% 8rem
     @include global.for-tablet-portrait-up
         height: 8rem
@@ -33,7 +33,7 @@
     
 .wrapper
     @include global.for-phone-only
-        height: 4rem
+        height: 3rem
         padding: 0 1rem 1rem
     @include global.for-tablet-portrait-up
         height: 5rem
