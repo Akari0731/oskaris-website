@@ -24,11 +24,17 @@
 .content
     width: 100%
     position: relative
-    &:hover
-        cursor: pointer
-    &:hover > .frame
+    &.centered > .frame
         visibility: visible
         opacity: 1
+    @include global.for-tablet-landscape-up
+        &.centered > .frame
+            visibility: hidden
+        &:hover
+            cursor: pointer
+        &:hover > .frame
+            visibility: visible
+            opacity: 1
 
 $padding: 0.75rem
 .frame
