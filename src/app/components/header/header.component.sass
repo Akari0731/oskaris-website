@@ -29,12 +29,15 @@
     background-attachment: scroll
     &.sticky
         position: -webkit-sticky
+        position: -moz-sticky
+        position: -o-sticky
+        position: -ms-sticky
         position: sticky
     
 .wrapper
     @include global.for-phone-only
         height: 3rem
-        padding: 0 1rem 1rem
+        padding: 0.5rem 1rem 1rem
     @include global.for-tablet-portrait-up
         height: 5rem
     @include global.for-tablet-landscape-up
