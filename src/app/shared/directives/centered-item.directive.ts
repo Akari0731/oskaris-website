@@ -10,16 +10,18 @@ export class CenteredItemDirective {
   scrolling(): void {
     if (!this.el.nativeElement || !window || !this.renderer) return;
 
-    const rect = this.el.nativeElement.getBoundingClientRect();
-    const topPosition = rect.top;
-    const bottomPosition = rect.bottom;
-    const windowCenter = window.outerHeight / 2;
-    const isCenteredElement =
-      topPosition < windowCenter && bottomPosition > windowCenter;
-    if (isCenteredElement) {
-      this.renderer.addClass(this.el.nativeElement, 'centered');
-      return;
-    }
-    this.renderer.removeClass(this.el.nativeElement, 'centered');
+    setInterval(() => {
+      const rect = this.el.nativeElement.getBoundingClientRect();
+      const topPosition = rect.top;
+      const bottomPosition = rect.bottom;
+      const windowCenter = window.outerHeight / 2;
+      const isCenteredElement =
+        topPosition < windowCenter && bottomPosition > windowCenter;
+      if (isCenteredElement) {
+        this.renderer.addClass(this.el.nativeElement, 'centered');
+        return;
+      }
+      this.renderer.removeClass(this.el.nativeElement, 'centered');
+    }, 500);
   }
 }
