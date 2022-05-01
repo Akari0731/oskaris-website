@@ -4,12 +4,15 @@
     <div
       appCenteredItem
       class="content"
-      *ngFor="let image of images"
-      (click)="onNavigateToVideo(image)">
-      <img src="{{ image.thumbnailSrc }}" />
+      *ngFor="let video of videos"
+      (click)="onNavigateToVideo(video)">
+      <img src="{{ video.thumbnailSrc }}" />
       <div class="frame">
         <div class="frameBorder">
-          <div class="frameTitle">{{ image.title }}</div>
+          <div class="frameTexts">
+            <div class="frameTitle client">{{ video.client }}</div>
+            <div class="frameTitle">{{ video.title }}</div>
+          </div>
         </div>
       </div>
     </div>

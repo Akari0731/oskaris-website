@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { images as imageObj } from 'src/app/constants';
 import { VideoProps } from '../../types';
 
 @Component({
@@ -11,7 +10,7 @@ import { VideoProps } from '../../types';
 export class SectionComponent {
   constructor(private router: Router) {}
 
-  images: VideoProps[] = imageObj;
+  @Input() videos: VideoProps[] = [];
 
   onNavigateToVideo(image: VideoProps) {
     this.router.navigate(['/work', image.id]);

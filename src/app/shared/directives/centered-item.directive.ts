@@ -14,7 +14,7 @@ export class CenteredItemDirective {
       const rect = this.el.nativeElement.getBoundingClientRect();
       const topPosition = rect.top;
       const bottomPosition = rect.bottom;
-      const windowCenter = window.outerHeight / 2;
+      const windowCenter = window.outerHeight / 2 + 32;
       const isCenteredElement =
         topPosition < windowCenter && bottomPosition > windowCenter;
       if (isCenteredElement) {

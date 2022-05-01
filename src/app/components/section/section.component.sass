@@ -35,7 +35,7 @@
             visibility: visible
             opacity: 1
 
-$padding: 0.75rem
+$padding: 1.5rem
 .frame
     visibility: hidden
     opacity: 0
@@ -46,23 +46,38 @@ $padding: 0.75rem
     width: calc(100% - $padding * 2)
     height: calc(100% - $padding * 2)
     padding: $padding
-
-$borderWidth: 0.125rem
-.frameBorder
-    height: calc(100% - $borderWidth * 2)
-    border: $borderWidth solid white
     display: flex
-    align-items: flex-end
+    justify-content: center
+    align-items: center
+
+.frameBorder
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    aspect-ratio: 1/1
+    background-color: rgba(255,255,255,0.85)
+    border-radius: 50%
+
+.frameTexts
+    padding: 2rem 0.5rem 1rem
+    transform: rotate(-17.74deg)
 
 .frameTitle
-    padding: 1rem 0 0.75rem
+    word-break: break-word
+    hyphens: manual
     width: 100%
-    background-color: rgba(0, 0, 0, 0.50)
-    color: global.$white
+    color: global.$yellow
+    text-align: center
     display: flex
     align-items: center
     justify-content: center
-    font-size: global.$font-medium
+    font-size: global.$font-normal
+    font-style: italic
+
+.client
+    color: global.$black
+
 
 img
     width: 100%
