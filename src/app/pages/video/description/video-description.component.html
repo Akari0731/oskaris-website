@@ -3,8 +3,21 @@
   <div class="title">{{ video.title }}</div>
   <div class="details">{{ video.description }}</div>
   <br />
-  <div class="details"><span>Execution:</span> {{ video.credit }}</div>
-  <div class="details"><span>Idea:</span> {{ video.author }}</div>
+  <div class="details">
+    <span>{{ video.credit1[0] }}:</span> {{ video.credit1[1] }}
+  </div>
+  <div class="details">
+    <span>{{ video.credit2[0] }}:</span> {{ video.credit2[1] }}
+  </div>
+  <div class="details" *ngIf="video.credit3">
+    <span>{{ video.credit3[0] }}:</span> {{ video.credit3[1] }}
+  </div>
+  <div class="details" *ngIf="video.credit4">
+    <span>{{ video.credit4[0] }}:</span> {{ video.credit4[1] }}
+  </div>
+  <div class="details" *ngIf="video.credit5">
+    <span>{{ video.credit5[0] }}:</span> {{ video.credit5[1] }}
+  </div>
 </ng-container>
 <ng-container *ngIf="!video">
   <div class="website">Check other work from home, please!</div>
