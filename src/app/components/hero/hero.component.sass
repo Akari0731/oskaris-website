@@ -1,21 +1,22 @@
 @use 'global'
-    
-.hero 
+
+.hero
     width: 100vw
-    min-height: 20rem
+    // min-height: 20rem
     background-image: url("../../../assets/logos/HeroBackground.svg")
     background-size: 100vw auto
     position: relative
     background-repeat: no-repeat
+    height: fit-content
     @include global.for-phone-only
         min-height: 6rem
     @include global.for-tablet-portrait-up
         min-height: 12rem
     @include global.for-tablet-landscape-up
-        min-height: 16rem
+        min-height: 15rem
     @include global.for-desktop-up
-        min-height: 20rem
-    @include global.for-big-desktop-up 
+        min-height: 22rem
+    @include global.for-big-desktop-up
         min-height: 24rem
 
 .originalPosition

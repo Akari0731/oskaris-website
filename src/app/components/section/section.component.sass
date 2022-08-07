@@ -16,30 +16,27 @@
         grid-template-columns: 1fr 1fr 1fr
     @include global.for-desktop-up
         grid-template-columns: 1fr 1fr 1fr
-    @include global.for-big-desktop-up 
+    @include global.for-big-desktop-up
         grid-template-columns: 1fr 1fr 1fr
-    grid-template-rows: auto 
+    grid-template-rows: auto
 
 .content
     width: 100%
     position: relative
     &.centered > .frame
-        visibility: visible
         opacity: 1
     @include global.for-tablet-landscape-up
         &.centered > .frame
-            visibility: hidden
+            opacity: 0
         &:hover
             cursor: pointer
         &:hover > .frame
-            visibility: visible
             opacity: 1
 
 $padding: 1.5rem
 .frame
-    visibility: hidden
     opacity: 0
-    transition: opacity 0.4s ease-in
+    transition: opacity 0.4s ease
     position: absolute
     top: 0
     left: 0
