@@ -23,9 +23,9 @@
         background-image: linear-gradient(to bottom, global.$white 0, global.$white 6rem, rgba(0, 65, 76, 0.24) 5rem, transparent 100%)
         background-size: 100% 12rem
     @include global.for-big-desktop-up
-        height: 12rem
-        background-image: linear-gradient(to bottom, global.$white 0, global.$white 6rem, rgba(0, 65, 76, 0.24) 5rem, transparent 100%)
-        background-size: 100% 12rem
+        height: 14rem
+        background-image: linear-gradient(to bottom, global.$white 0, global.$white 7rem, rgba(0, 65, 76, 0.24) 6rem, transparent 100%)
+        background-size: 100% 14rem
     background-attachment: scroll
     &.sticky
         position: -webkit-sticky
@@ -37,33 +37,41 @@
 .wrapper
     @include global.for-phone-only
         height: 3rem
-        padding: 0.5rem 1rem 1rem
+        padding: 0rem 1rem 1rem
     @include global.for-tablet-portrait-up
-        height: 5rem
+        height: 3.75rem
+        padding: 0.5rem 2rem 1.75rem
     @include global.for-tablet-landscape-up
-        height: 6rem
+        height: 4.25rem
+        padding: 0.5rem 2rem 2rem
     @include global.for-desktop-up
-        height: 8rem
+        height: 4.75rem
+        padding: 1rem 2rem 2.5rem
+    @include global.for-middle-desktop-up
+        height: 5rem
+        padding: 1rem 2rem 2.25rem
+        background-size: contain
     @include global.for-big-desktop-up
-        height: 8rem
+        height: 5.75rem
+        padding: 1rem 2rem 3rem
+        background-size: contain
     display: flex
     justify-content: space-between
     align-items: center
-    padding: 0 2rem 1.5rem
     background-image: url('../../../assets/logos/Header.svg')
     background-size: cover
 
 .icon
     @include global.for-phone-only
-        height: 3rem
-    @include global.for-tablet-portrait-up
         height: 4rem
-    @include global.for-tablet-landscape-up
+    @include global.for-tablet-portrait-up
         height: 5rem
+    @include global.for-tablet-landscape-up
+        height: 5.75rem
     @include global.for-desktop-up
         height: 6rem
     @include global.for-big-desktop-up
-        height: 6rem
+        height: 7rem
     &:hover
         cursor: pointer
 

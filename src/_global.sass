@@ -22,7 +22,7 @@ $font-huge: 5rem
 
 //media
 @mixin for-phone-only
-    @media (max-width: 599px) 
+    @media (max-width: 599px)
         @content
 
 @mixin for-tablet-portrait-up
@@ -35,6 +35,10 @@ $font-huge: 5rem
 
 @mixin for-desktop-up
     @media (min-width: 1200px)
+        @content
+
+@mixin for-middle-desktop-up
+    @media (min-width: 1500px)
         @content
 
 @mixin for-big-desktop-up
