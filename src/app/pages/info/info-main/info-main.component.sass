@@ -1,36 +1,18 @@
 @use 'global'
 
-:host
-    display: flex
-    justify-content: center
-    flex-wrap: wrap-reverse
-    @include global.for-tablet-landscape-up
-        flex-direction: row
-        flex-wrap: nowrap
-    gap: 3rem
-
-.description
-    text-align: center
-    font-size: global.$font-normal
-    padding: 1rem 2rem
-    @include global.for-tablet-landscape-up
-        font-size: global.$font-medium
-        padding: 2rem 3rem
-
 .info
     display: flex
     flex-direction: column
-    align-items: center
 
 .logo
     width: 80vw
     @include global.for-tablet-landscape-up
         width: 100%
 
-.profile
-    width: 60vw
-    height: 60vw
-    justify-self: center
+.description
+    text-align: left
+    font-size: global.$font-normal
+    padding: 1rem 2rem
     @include global.for-tablet-landscape-up
-        width: 40vw
-        height: 40vw
+        font-size: global.$font-medium
+        padding: 2rem 3rem
