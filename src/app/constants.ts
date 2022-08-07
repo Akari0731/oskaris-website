@@ -136,7 +136,7 @@ export const videos: VideoProps[] = [
   {
     id: '713274842',
     src: 'https://player.vimeo.com/video/713274842?h=740b618adf&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479',
-    title: 'Kylässä elämänturvaajalla',
+    title: 'Kylässä',
     client: 'Lähitapiola',
     description:
       'Down to earth short documentary style video showcasing people who work for Lähitapiola. In this episode we got to know Kati and her dog Loki (She offered us the best pie during the filming day! Thank you!',
