@@ -63,7 +63,7 @@
 
 .icon
     @include global.for-phone-only
-        height: 4rem
+        height: 3.5rem
     @include global.for-tablet-portrait-up
         height: 5rem
     @include global.for-tablet-landscape-up
@@ -78,20 +78,24 @@
 .buttons
     display: flex
     column-gap: 1.5rem
-    font-size: global.$font-medium
+    font-size: global.$font-normal
     font-style: italic
+    @include global.for-desktop-up
+      font-size: global.$font-medium
     @include global.for-phone-only
-        font-size: 1rem
-
+      font-size: global.$font-small
+      column-gap: 1.75rem
 .active
     color: global.$green
     position: relative
 
 .japanese
-    font-size: global.$font-normal
+    font-size: global.$font-small
     font-style: initial
+    @include global.for-desktop-up
+      font-size: global.$font-normal
     @include global.for-phone-only
-        font-size: 0.75rem
+      font-size: 1rem
     font-family: global.$font-kosugi-maru
     flex-direction: column
     &.active
@@ -104,9 +108,11 @@
     display: flex
     justify-content: center
     align-items: center
-    min-width: 6rem
+    min-width: 4.5rem
+    @include global.for-desktop-up
+      min-width: 6rem
     @include global.for-phone-only
-        min-width: 2rem
+      min-width: 2.75rem
     height: 3rem
     &:hover
         cursor: pointer

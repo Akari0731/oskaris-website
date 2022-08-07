@@ -1,18 +1,18 @@
 @use 'global'
 
 .content
-    margin-top: -2rem
-    @include global.for-tablet-portrait-up
+    margin-top: -1rem
+    @include global.for-tablet-landscape-up
         margin-top: -2rem
 
 .title
     width: 100%
     text-align: center
     font-size: global.$font-normal
-    @include global.for-tablet-landscape-up
-        font-size: global.$font-medium
     font-family: global.$font-confotaa
     font-weight: bold
+    @include global.for-tablet-portrait-up
+      font-size: global.$font-medium
     & > span
         color: global.$yellow
         padding: 0 0.5rem

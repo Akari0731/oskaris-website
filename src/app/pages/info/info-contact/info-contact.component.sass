@@ -12,9 +12,9 @@
 
 .contactDetails
     padding-top: 0.75rem
-    font-size: global.$font-small
-    @include global.for-tablet-landscape-up
-        font-size: global.$font-normal
+    font-size: global.$font-normal
+    @include global.for-phone-only
+      font-size: global.$font-small
     font-weight: bold
     & > span
         color: global.$yellow

@@ -2,19 +2,18 @@
 $ratio-base: 3.5
 
 .wrapper
-    padding: 6rem 2rem 2rem 
-    @include global.for-tablet-landscape-up
-        padding: global.$header-padding 3rem 2rem 0
+    padding: 6rem 2rem 2rem
     display: grid
     column-gap: 2rem
     grid-template-columns: 1fr
-    @include global.for-tablet-landscape-up
-        grid-template-columns: 4rem calc($ratio-base * 16vw) 1fr
     align-items: center
+    @include global.for-desktop-up
+      padding: global.$header-padding 3rem 2rem 0
+      grid-template-columns: 4rem calc($ratio-base * 16vw) 1fr
 
 .button
     height: 0
-    @include global.for-tablet-landscape-up
+    @include global.for-desktop-up
         height: 8rem
     &:hover
         cursor: pointer

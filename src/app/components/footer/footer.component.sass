@@ -19,27 +19,31 @@
     font-style: italic
     font-size: global.$font-normal
     @include global.for-tablet-landscape-up
-        font-size: global.$font-medium
+      font-size: global.$font-medium-large
+
 .contact
     color: #FCB23A
 
 .details
+    font-family: global.$font-confotaa
     width: 90%
     display: grid
     grid-template-columns: 4fr 1fr 4fr 1fr 4fr
     @include global.for-phone-only
-        grid-template-columns: 4fr 1fr
-    justify-items: center
-    font-size: global.$font-small
+      grid-template-columns: 4fr 1fr
+      justify-items: center
+      font-size: 1rem
     @include global.for-tablet-landscape-up
-        font-size: global.$font-normal
-    font-family: global.$font-confotaa
+      font-size: global.$font-normal
 
 img
     height: 5rem
 
 .divider
-    height: 2rem
+    height: 1rem
+    @include global.for-tablet-landscape-up
+      height: 2rem
     width: 0.2rem
     background-color: global.$yellow
     border-radius: 25%
+    align-self: center

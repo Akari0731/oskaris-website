@@ -1,9 +1,11 @@
 @use 'global'
 :host
     position: absolute
-    left: -2.5rem
+    left: -2.75rem
+    @include global.for-desktop-up
+      left: -2.5rem
     @include global.for-phone-only
-        left: -1.75rem
+      left: -1.75rem
     display: flex
     align-items: flex-end
 
@@ -14,9 +16,12 @@
 
 .pencilLine
     height: 2rem
-    width: 5.5rem
-    margin-left: -1.25rem
+    width: 4.5rem
+    margin-left: -0.75rem
+    @include global.for-desktop-up
+      width: 5.5rem
+      margin-left: -1.25rem
     @include global.for-phone-only
         height: 1rem
-        width: 3rem
-        margin-left: -0.75rem
+        width: 3.25rem
+        margin-left: -0.5rem
