@@ -18,7 +18,7 @@ export class MusicButtonComponent {
     });
   }
 
-  public audio: HTMLAudioElement = new Audio('assets/audio/inspiration.mp3');
+  public audio: HTMLAudioElement = new Audio('assets/audio/Nettisivubossa.mp3');
   public isPlaying: boolean = false;
 
   public onClickPlay() {
