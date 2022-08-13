@@ -32,12 +32,19 @@
     @include global.for-phone-only
       grid-template-columns: 4fr 1fr
       justify-items: center
-      font-size: 1rem
+      font-size: global.$font-small
     @include global.for-tablet-landscape-up
       font-size: global.$font-normal
+    @include global.for-desktop-up
+      font-size: global.$font-medium
 
 img
     height: 5rem
+    @include global.for-tablet-landscape-up
+      height: 7rem
+
+.text
+  justify-self: center
 
 .divider
     height: 1rem
@@ -47,3 +54,4 @@ img
     background-color: global.$yellow
     border-radius: 25%
     align-self: center
+    justify-self: center
