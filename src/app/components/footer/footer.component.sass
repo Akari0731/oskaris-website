@@ -29,11 +29,12 @@
     width: 90%
     display: grid
     grid-template-columns: 4fr 1fr
-    font-size: global.$font-normal
+    font-size: global.$font-small
     @include global.for-phone-only
       justify-items: center
-      font-size: global.$font-small
+      font-size: 1rem
     @include global.for-tablet-landscape-up
+      font-size: global.$font-normal
       grid-template-columns: 4fr 1fr 4fr 1fr 4fr
     @include global.for-desktop-up
       font-size: global.$font-medium
