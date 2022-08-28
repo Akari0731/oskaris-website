@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { animations, videos } from 'src/app/constants';
+import { LanguageService } from 'src/app/shared/services/language.service';
+import { VideoProps } from 'src/app/types';
 
 @Component({
   selector: 'app-home',
@@ -7,10 +8,23 @@ import { animations, videos } from 'src/app/constants';
   styleUrls: ['./home.component.sass'],
 })
 export class HomeComponent implements OnInit {
-  ngOnInit() {
-    window.scrollTo(0, 0);
+  animations: VideoProps[] = [];
+  videos: VideoProps[] = [];
+  language: 'en' | 'ja' = 'en';
+
+  constructor(private languageService: LanguageService) {
+    this.animations = this.languageService.getAnimationTranslations();
+    this.videos = this.languageService.getVideoTranslations();
+    this.language = this.languageService.getLanguage();
   }
 
-  animations = animations;
-  videos = videos;
+  ngOnInit() {
+    window.scrollTo(0, 0);
+
+    this.languageService.languageSubject.subscribe(language => {
+      this.animations = this.languageService.getAnimationTranslations();
+      this.videos = this.languageService.getVideoTranslations();
+      this.language = this.languageService.getLanguage();
+    });
+  }
 }

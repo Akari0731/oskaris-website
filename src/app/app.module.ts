@@ -14,11 +14,11 @@ import { HomeComponent } from './pages/home/home.component';
 import { InfoContactComponent } from './pages/info/info-contact/info-contact.component';
 import { InfoMainComponent } from './pages/info/info-main/info-main.component';
 import { InfoComponent } from './pages/info/info.component';
-import { JapaneseComponent } from './pages/japanese/japanese.component';
 import { VideoDescriptionComponent } from './pages/video/description/video-description.component';
 import { VideoComponent } from './pages/video/video.component';
 import { CenteredItemDirective } from './shared/directives/centered-item.directive';
 import { SafePipe } from './shared/pipes/safe.pipe';
+import { TranslationPipe } from './shared/pipes/translation.pipe';
 
 @NgModule({
   declarations: [
@@ -32,11 +32,11 @@ import { SafePipe } from './shared/pipes/safe.pipe';
     VideoComponent,
     InfoComponent,
     ActivePageComponent,
-    JapaneseComponent,
     VideoDescriptionComponent,
     InfoContactComponent,
     InfoMainComponent,
     SafePipe,
+    TranslationPipe,
     CenteredItemDirective,
   ],
   imports: [

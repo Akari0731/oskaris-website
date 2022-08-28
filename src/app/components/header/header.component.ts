@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Event, NavigationEnd, NavigationError, Router } from '@angular/router';
+import { LanguageService } from 'src/app/shared/services/language.service';
 
 @Component({
   selector: 'app-header',
@@ -9,8 +10,12 @@ import { Event, NavigationEnd, NavigationError, Router } from '@angular/router';
 export class HeaderComponent {
   @Input() sticky: boolean | undefined;
   activeRoute: string = this.router.url;
+  language: 'en' | 'ja' = 'en';
 
-  constructor(private router: Router) {
+  constructor(
+    private router: Router,
+    private languageService: LanguageService
+  ) {
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {
         this.activeRoute = this.router.url;
@@ -20,13 +25,17 @@ export class HeaderComponent {
         this.activeRoute = 'error';
       }
     });
+
+    this.language = this.languageService.getLanguage();
+    this.languageService.languageSubject.subscribe(newLanguage => {
+      this.language = newLanguage;
+    });
   }
 
   onNavigateHome() {
     this.router.navigate(['']);
   }
 
-  //TODO: where to navigate?
   onNavigateWork() {
     this.router.navigate(['']);
   }
@@ -35,7 +44,7 @@ export class HeaderComponent {
     this.router.navigate(['info']);
   }
 
-  onNavigateJapanese() {
-    this.router.navigate(['japanese']);
+  onSwitchLanguage() {
+    this.languageService.switchLanguage();
   }
 }

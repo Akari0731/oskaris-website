@@ -21,12 +21,10 @@
         Info
       </div>
       <div
-        class="button japanese"
-        (click)="onNavigateJapanese()"
-        [ngClass]="{ active: activeRoute === '/japanese' }">
-        <app-active-page
-          [active]="activeRoute === '/japanese'"></app-active-page>
-        日本語<span class="space"></span>
+        class="button"
+        (click)="onSwitchLanguage()"
+        [ngClass]="{ japanese: language === 'en' }">
+        {{ language === 'en' ? '日本語' : 'Eng' }}
       </div>
     </div>
   </div>

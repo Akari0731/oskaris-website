@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
-import { animations, videos } from 'src/app/constants';
+import { merge } from 'rxjs';
+import { LanguageService } from 'src/app/shared/services/language.service';
 import { VideoProps } from 'src/app/types';
 
 @Component({
@@ -9,15 +10,38 @@ import { VideoProps } from 'src/app/types';
   styleUrls: ['./video.component.sass'],
 })
 export class VideoComponent implements OnInit {
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  id: string = '';
   video: VideoProps | undefined = undefined;
+  animations: VideoProps[] = [];
+  videos: VideoProps[] = [];
+
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private languageService: LanguageService
+  ) {
+    this.animations = this.languageService.getAnimationTranslations();
+    this.videos = this.languageService.getVideoTranslations();
+  }
 
   ngOnInit() {
     window.scrollTo(0, 0);
-    this.route.params.subscribe((params: Params) => {
+
+    this.languageService.languageSubject.subscribe(language => {
+      this.animations = this.languageService.getAnimationTranslations();
+      this.videos = this.languageService.getVideoTranslations();
       this.video =
-        animations.find(image => image.id === params['id']) ||
-        videos.find(image => image.id === params['id']);
+        this.animations.find(image => image.id === this.id) ||
+        this.videos.find(image => image.id === this.id);
+    });
+
+    this.route.params.subscribe((params: Params) => {
+      this.id = params['id'];
+      this.animations = this.languageService.getAnimationTranslations();
+      this.videos = this.languageService.getVideoTranslations();
+      this.video =
+        this.animations.find(image => image.id === params['id']) ||
+        this.videos.find(image => image.id === params['id']);
     });
   }
 
