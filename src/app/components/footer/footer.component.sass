@@ -8,7 +8,6 @@
     align-items: center
     justify-content: center
 
-
 .info
     display: flex
     flex-direction: column
@@ -30,14 +29,13 @@
     display: grid
     grid-template-columns: 4fr 1fr
     font-size: global.$font-small
+    align-items: center
     @include global.for-phone-only
       justify-items: center
       font-size: 1rem
     @include global.for-tablet-landscape-up
       font-size: global.$font-normal
       grid-template-columns: 4fr 1fr 4fr 1fr 4fr
-    @include global.for-desktop-up
-      font-size: global.$font-medium
 
 .email
   font-style: none

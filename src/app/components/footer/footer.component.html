@@ -5,7 +5,9 @@
       <span class="contact">Contact me</span>
     </div>
     <div class="details">
-      <div class="text">{{ 'Oskari Friman' | translation: language }}</div>
+      <div class="text" [class.japanese]="language === 'ja'">
+        {{ 'Oskari Friman' | translation: language }}
+      </div>
       <span class="divider"></span>
       <div class="text"><a href="tel:+817016347676">+81 70 1634 7676</a></div>
       <span class="divider"></span>

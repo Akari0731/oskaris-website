@@ -3,10 +3,14 @@
   <app-header [sticky]="true"></app-header>
   <div class="content">
     <app-section [videos]="animations">
-      <div class="title">{{ 'Animation' | translation: language }}</div>
+      <div class="title" [class.japanese]="language === 'ja'">
+        {{ 'Animation' | translation: language }}
+      </div>
     </app-section>
     <app-section [videos]="videos">
-      <div class="title">{{ 'Video' | translation: language }}</div>
+      <div class="title" [class.japanese]="language === 'ja'">
+        {{ 'Video' | translation: language }}
+      </div>
     </app-section>
   </div>
   <app-footer></app-footer>
