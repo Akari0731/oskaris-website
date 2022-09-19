@@ -126,7 +126,7 @@ export const videos: VideoProps[] = [
     title: 'Paluu tulevaisuuteen',
     client: 'Uber',
     description:
-      'Lightning fast commercial to support Über’s comeback to Finland.',
+      'Lightning fast commercial to support Uber’s comeback to Finland.',
     credit1: ['Filming, editing & VFX', 'Me'],
     credit2: ['Director', 'Petri Lyytikäinen'],
     credit3: ['Screenwriter and producer', 'Joni Mussalo'],
